@@ -21,6 +21,7 @@ prog = File.readlines("hw.golf") # hangs on hw, so using hw.golf
 count = 0
 i = 0
 while i < prog[0].length-1  # -1: \n
+	# remove i-th char from each line
 	prog1 = prog.map{ |line| line1 = line.dup; line1.slice!(i); line1 }
 	File.write("tmp", prog1.join)
 	if run
